@@ -924,21 +924,20 @@
 				<version>2.2</version>
 				<configuration>
 					<packagingExcludes>WEB-INF/**.tld</packagingExcludes>
-					<warSourceExcludes>resources/bootstrap/**</warSourceExcludes>
+					<!-- for future reference only
+					<warSourceExcludes>resources/static/entando-misc-bootstrap/**</warSourceExcludes>
 					<webResources>
 						<resource>
-							<!-- this is relative to the pom.xml directory -->
-							<directory>src/main/webapp/resources/bootstrap</directory>
-							<!-- override the destination directory for this resource -->
-							<targetPath>resources/static</targetPath>
+							<directory>src/main/webapp/resources/static/entando-misc-bootstrap</directory>
+							<targetPath>resources/static/entando-misc-bootstrap</targetPath>
 							<includes>
 								<include>bootstrap/**</include>
 							</includes>
 						</resource>
-					</webResources>					
+					</webResources>	
+					-->
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.lesscss</groupId>
 				<artifactId>lesscss-maven-plugin</artifactId>
@@ -958,7 +957,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -1051,6 +1049,19 @@
 			<type>zip</type>
 			<classifier>misc</classifier>
 		</dependency>
+		<dependency>
+			<groupId>org.entando.entando.bundles.misc</groupId>
+			<artifactId>entando-misc-bootstrap</artifactId>
+			<version>${entando.version}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>org.entando.entando.bundles.misc</groupId>
+			<artifactId>entando-misc-bootstrap</artifactId>
+			<version>${entando.version}</version>
+			<type>zip</type>
+			<classifier>misc</classifier>
+		</dependency>		
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-webapp</artifactId>
