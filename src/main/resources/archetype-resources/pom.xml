@@ -76,7 +76,7 @@
 			<properties>
 				<env>exewar</env>
 			</properties>
-		</profile>		
+		</profile>
 		<profile>
 			<id>windows</id>
 			<activation>
@@ -119,7 +119,7 @@
 				<includes>
 					<include>**/*.tld</include>
 				</includes>
-			</resource>			
+			</resource>
 		</resources>
 		<filters>
 			<filter>src/main/filters/filter-${env}.properties</filter>
@@ -256,12 +256,12 @@
 									<directory>src/test/config</directory>
 									<includes>
 										<include>contextTestParams.properties</include>
-									</includes>									
+									</includes>
 									<filtering>true</filtering>
 								</resource>
 							</resources>
 						</configuration>
-					</execution>					
+					</execution>
 					<execution>
 						<id>copy-resources-conf</id>
 						<!-- here the phase you need -->
@@ -361,12 +361,12 @@
 									<directory>src/main/tld</directory>
 									<includes>
 										<include>**/*.tld</include>
-									</includes>                                 
+									</includes>
 									<filtering>false</filtering>
 								</resource>
 							</resources>
 						</configuration>
-					</execution> 
+					</execution>
 					<execution>
 						<id>derby-copy-sql</id>
 						<phase>prepare-package</phase>
@@ -410,6 +410,7 @@
 				<version>1.6</version><!--$NO-MVN-MAN-VER$ -->
 				<executions>
 					<execution>
+						<id>prepare-derby-db</id>
 						<phase>prepare-package</phase>
 						<configuration>
 							<target>
@@ -596,7 +597,7 @@
 							<password>${test.database.password}</password>
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/template1</url>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>						
+							<keepFormat>false</keepFormat>
 							<autocommit>true</autocommit>
 							<sqlCommand>create database "${project.artifactId}testPort"</sqlCommand>
 						</configuration>
@@ -613,7 +614,7 @@
 							<password>${test.database.password}</password>
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/template1</url>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>						
+							<keepFormat>false</keepFormat>
 							<autocommit>true</autocommit>
 							<sqlCommand>create database "${project.artifactId}testServ"</sqlCommand>
 						</configuration>
@@ -629,7 +630,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>						
+							<keepFormat>false</keepFormat>
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testPort</url>
 							<onError>continue</onError>
 							<autocommit>true</autocommit>
@@ -649,7 +650,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>						
+							<keepFormat>false</keepFormat>
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testServ</url>
 							<onError>continue</onError>
 							<autocommit>true</autocommit>
@@ -669,7 +670,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>						
+							<keepFormat>false</keepFormat>
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testPort</url>
 							<escapeProcessing>false</escapeProcessing>
 							<enableBlockMode>true</enableBlockMode>
@@ -691,7 +692,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>						
+							<keepFormat>false</keepFormat>
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testServ</url>
 							<escapeProcessing>false</escapeProcessing>
 							<enableBlockMode>true</enableBlockMode>
@@ -713,7 +714,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>						
+							<keepFormat>false</keepFormat>
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testPort</url>
 							<escapeProcessing>false</escapeProcessing>
 							<enableBlockMode>true</enableBlockMode>
@@ -739,7 +740,7 @@
 							<username>${test.database.username}</username>
 							<password>${test.database.password}</password>
 							<skip>${skipTests}</skip>
-							<keepFormat>false</keepFormat>						
+							<keepFormat>false</keepFormat>
 							<url>jdbc:postgresql://${test.database.hostname}:${test.database.port}/${project.artifactId}testServ</url>
 							<escapeProcessing>false</escapeProcessing>
 							<enableBlockMode>true</enableBlockMode>
@@ -764,8 +765,8 @@
 						<configuration>
 							<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
 							<username>${test.database.username}</username>
-							<password>${test.database.password}</password>							
-							<keepFormat>false</keepFormat>			
+							<password>${test.database.password}</password>
+							<keepFormat>false</keepFormat>
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Port;create=true</url>
 							<skip>${skipDerby}</skip>
 							<skipOnConnectionError>true</skipOnConnectionError>
@@ -785,10 +786,10 @@
 						<configuration>
 							<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
 							<username>${test.database.username}</username>
-							<password>${test.database.password}</password>							
-							<keepFormat>false</keepFormat>			
+							<password>${test.database.password}</password>
+							<keepFormat>false</keepFormat>
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Port</url>
-							<skip>${skipDerby}</skip>							
+							<skip>${skipDerby}</skip>
 							<skipOnConnectionError>true</skipOnConnectionError>
 							<onError>abort</onError>
 							<autocommit>true</autocommit>
@@ -796,7 +797,7 @@
 								<srcFile>${project.build.directory}/derby/sql/${project.artifactId}Port_data.sql</srcFile>
 							</srcFiles>
 						</configuration>
-					</execution>					
+					</execution>
 					<execution>
 						<id>derby-create-schema-serv</id>
 						<phase>prepare-package</phase>
@@ -806,10 +807,10 @@
 						<configuration>
 							<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
 							<username>${test.database.username}</username>
-							<password>${test.database.password}</password>							
-							<keepFormat>false</keepFormat>			
+							<password>${test.database.password}</password>
+							<keepFormat>false</keepFormat>
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Serv;create=true</url>
-							<skip>${skipDerby}</skip>							
+							<skip>${skipDerby}</skip>
 							<skipOnConnectionError>true</skipOnConnectionError>
 							<onError>abort</onError>
 							<autocommit>true</autocommit>
@@ -827,10 +828,10 @@
 						<configuration>
 							<driver>org.apache.derby.jdbc.EmbeddedDriver</driver>
 							<username>${test.database.username}</username>
-							<password>${test.database.password}</password>							
-							<keepFormat>false</keepFormat>			
+							<password>${test.database.password}</password>
+							<keepFormat>false</keepFormat>
 							<url>jdbc:derby:${project.build.directory}/${project.artifactId}/WEB-INF/derby/${project.artifactId}Serv</url>
-							<skip>${skipDerby}</skip>							
+							<skip>${skipDerby}</skip>
 							<skipOnConnectionError>true</skipOnConnectionError>
 							<onError>abort</onError>
 							<autocommit>true</autocommit>
@@ -838,24 +839,24 @@
 								<srcFile>${project.build.directory}/derby/sql/${project.artifactId}Serv_data.sql</srcFile>
 							</srcFiles>
 						</configuration>
-					</execution>														
+					</execution>
 				</executions>
 			</plugin>
-                        <plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-surefire-plugin</artifactId>
-                                <version>2.12</version>
-                                <configuration>
-                                        <argLine>-Xms512m -Xmx1024m</argLine>
-                                        <testFailureIgnore>false</testFailureIgnore>
-                                        <excludes>
-                                                <exclude>**/*BaseTestCase*</exclude>
-                                        </excludes>
-                                        <includes>
-                                                <include>**/AllTests.java</include>
-                                        </includes>
-                                </configuration>
-                        </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12</version>
+				<configuration>
+					<argLine>-Xms512m -Xmx1024m</argLine>
+					<testFailureIgnore>false</testFailureIgnore>
+					<excludes>
+						<exclude>**/*BaseTestCase*</exclude>
+					</excludes>
+					<includes> 
+						<include>**/AllTests.java</include>
+					</includes>
+				</configuration>			
+			</plugin>
 			<!-- mvn jetty:run (with hot-redeploy) -->
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
@@ -881,7 +882,7 @@
 						<groupId>mysql</groupId>
 						<artifactId>mysql-connector-java</artifactId>
 						<version>5.1.18</version>
-					</dependency>					
+					</dependency>
 					<dependency>
 						<groupId>commons-dbcp</groupId>
 						<artifactId>commons-dbcp</artifactId>
@@ -903,7 +904,7 @@
 						<configuration>
 							<path>/${project.artifactId}</path>
 							<!-- Not working... waiting for the plugin...
-							<tomcatWebXml>${basedir}/src/main/config/tomcat-exewar-web.xml</tomcatWebXml> 
+							<tomcatWebXml>${basedir}/src/main/config/tomcat-exewar-web.xml</tomcatWebXml>
 							-->
 							<enableNaming>true</enableNaming>
 							<extraDependencies>
@@ -920,11 +921,44 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1.1</version>
+				<version>2.2</version>
 				<configuration>
 					<packagingExcludes>WEB-INF/**.tld</packagingExcludes>
+					<warSourceExcludes>resources/bootstrap/**</warSourceExcludes>
+					<webResources>
+						<resource>
+							<!-- this is relative to the pom.xml directory -->
+							<directory>src/main/webapp/resources/bootstrap</directory>
+							<!-- override the destination directory for this resource -->
+							<targetPath>resources/static</targetPath>
+							<includes>
+								<include>bootstrap/**</include>
+							</includes>
+						</resource>
+					</webResources>					
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.lesscss</groupId>
+				<artifactId>lesscss-maven-plugin</artifactId>
+				<version>1.3.0</version>
+				<configuration>
+					<sourceDirectory>${project.basedir}/src/main/webapp/resources/static/less</sourceDirectory>
+					<outputDirectory>${project.build.directory}/${project.build.finalName}/resources/static/css</outputDirectory>
+					<compress>true</compress>
+				</configuration>
+				<executions>
+					<execution>
+						<id>build-lesscss-files</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 		<pluginManagement>
 			<plugins>

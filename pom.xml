@@ -7,7 +7,7 @@
 		<version>7</version>
 	</parent>	
 	<groupId>org.entando.entando</groupId>
-	<artifactId>entando-archetype-portal-generic</artifactId>
+	<artifactId>entando-archetype-portal-bootstrap</artifactId>
 	<version>3.0.1-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Entando: Archetype for Generic Portal</name>
@@ -21,9 +21,9 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:git://github.com/entando/entando-archetype-portal-generic.git</connection>
-		<developerConnection>scm:git:git@github.com:entando/entando-archetype-portal-generic.git</developerConnection>
-		<url>https://github.com/entando/entando-archetype-portal-generic</url>
+		<connection>scm:git:git://github.com/entando/entando-archetype-portal-bootstrap.git</connection>
+		<developerConnection>scm:git:git@github.com:entando/entando-archetype-portal-bootstrap.git</developerConnection>
+		<url>https://github.com/entando/entando-archetype-portal-bootstrap</url>
 	</scm>	
 	<developers>
 		<developer>
