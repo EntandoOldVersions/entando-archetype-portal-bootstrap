@@ -1039,6 +1039,19 @@
 	</build>
 	<dependencies>
 		<dependency>
+			<groupId>org.entando.entando.bundles.misc</groupId>
+			<artifactId>entando-misc-less</artifactId>
+			<version>${entando.version}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>org.entando.entando.bundles.misc</groupId>
+			<artifactId>entando-misc-less</artifactId>
+			<version>${entando.version}</version>
+			<type>zip</type>
+			<classifier>misc</classifier>
+		</dependency>
+		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-webapp</artifactId>
 			<version>${entando.version}</version>
