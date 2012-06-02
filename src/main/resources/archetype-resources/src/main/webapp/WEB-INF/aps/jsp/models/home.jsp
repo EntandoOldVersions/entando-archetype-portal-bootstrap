@@ -55,7 +55,7 @@
 	<div class="container">
 
 	<!-- START WELCOME -->
-	<h1>It Worked!<br /> <strong>Entando</strong> is Installed on this host.</h1>
+	<h1>It Worked!<br /> <strong>Entando</strong> is installed on this host.</h1>
 	<h2 class="lead">Version <wp:info key="systemParam" paramName="version" /></h2>
 
 	<p>
