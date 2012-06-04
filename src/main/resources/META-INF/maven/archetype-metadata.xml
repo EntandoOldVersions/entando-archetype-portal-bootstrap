@@ -64,6 +64,7 @@
 				<include>**/*.properties</include>
 				<include>**/*.txt</include>
 				<include>**/*.png</include>
+				<include>**/*.less</include>
 			</includes>
 			<excludes>
 				<exclude>src/main/webapp/WEB-INF/aps/jsp/models/inc/lesscss-active</exclude>
@@ -74,8 +75,8 @@
 			<directory>src/main/webapp/resources/static/less</directory>
 			<includes>
 				<include>*.less</include>
-			</includes>			
-		</fileSet>			
+			</includes>
+		</fileSet>
 		<fileSet encoding="UTF-8">
 			<directory>src/main/config</directory>
 			<includes>
