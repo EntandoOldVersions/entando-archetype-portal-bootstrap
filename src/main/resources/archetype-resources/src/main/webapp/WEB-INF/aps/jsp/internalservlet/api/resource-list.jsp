@@ -42,7 +42,7 @@
 	<s:set var="icon_lock"><img src="<wp:resourceURL />administration/common/img/icons/22x22/api-authorization.png"  alt="<wp:i18n key="ENTANDO_API_METHOD_STATUS_LOCK" />" /></s:set>
 	<s:set var="title_lock"><wp:i18n key="ENTANDO_API_METHOD_STATUS_LOCK" />. <wp:i18n key="ENTANDO_API_GOTO_DETAILS" /></s:set>
 	<s:iterator var="resourceFlavourVar" value="#resourceFlavoursVar" status="resourceFlavourStatusVar">
-	<div class="tab-pane" id="api-flavour-<s:property value='%{#captionVar.toLowerCase().replaceAll("[^a-z0-9]", "")}' />">
+	<div class="tab-pane id="api-flavour-<s:property value='%{#captionVar.toLowerCase().replaceAll("[^a-z0-9]", "")}' />"">
 		<table class="table table-striped table-bordered table-condensed" summary="<wp:i18n key="ENTANDO_API_TABLE_SUMMARY" />">
 			<s:iterator value="#resourceFlavourVar" var="resourceVar" status="statusVar" >
 				<s:if test="#statusVar.first">
@@ -74,7 +74,7 @@
 					<td><s:property value="#resourceVar.description" /></td>
 					<%-- GET --%>
 					<td class="text-center">
-						<s:if test="#resourceVar.getMethod != null && #resourceVar.getMethod.active" >
+						<s:if test="#resourceVar.getMethod != null && #resourceVar.getMethod.active && (!#resourceVar.getMethod.hidden)" >
 							<s:if test="#resourceVar.getMethod.requiredPermission != null" ><s:set var="icon" value="#icon_lock" /><s:set var="title" value="#title_lock" /></s:if>
 							<s:elseif test="#resourceVar.getMethod.requiredAuth" ><s:set var="icon" value="#icon_auth" /><s:set var="title" value="#title_auth" /></s:elseif>
 							<s:else><s:set var="icon" value="#icon_free" /><s:set var="title" value="#title_free" /></s:else>
@@ -86,7 +86,7 @@
 					</td>
 					<%-- POST --%>
 					<td class="text-center">
-						<s:if test="#resourceVar.postMethod != null && #resourceVar.postMethod.active" >
+						<s:if test="#resourceVar.postMethod != null && #resourceVar.postMethod.active && (!#resourceVar.postMethod.hidden)" >
 							<s:if test="#resourceVar.postMethod.requiredPermission != null" ><s:set var="icon" value="#icon_lock" /><s:set var="title" value="#title_lock" /></s:if>
 							<s:elseif test="#resourceVar.postMethod.requiredAuth" ><s:set var="icon" value="#icon_auth" /><s:set var="title" value="#title_auth" /></s:elseif>
 							<s:else><s:set var="icon" value="#icon_free" /><s:set var="title" value="#title_free" /></s:else>
@@ -98,7 +98,7 @@
 					</td>
 					<%-- PUT --%>
 					<td class="text-center">
-						<s:if test="#resourceVar.putMethod != null && #resourceVar.putMethod.active" >
+						<s:if test="#resourceVar.putMethod != null && #resourceVar.putMethod.active && (!#resourceVar.putMethod.hidden)" >
 							<s:if test="#resourceVar.putMethod.requiredPermission != null" ><s:set var="icon" value="#icon_lock" /><s:set var="title" value="#title_lock" /></s:if>
 							<s:elseif test="#resourceVar.putMethod.requiredAuth" ><s:set var="icon" value="#icon_auth" /><s:set var="title" value="#title_auth" /></s:elseif>
 							<s:else><s:set var="icon" value="#icon_free" /><s:set var="title" value="#title_free" /></s:else>
@@ -110,7 +110,7 @@
 					</td>
 					<%-- DELETE --%>
 					<td class="text-center">
-						<s:if test="#resourceVar.deleteMethod != null && #resourceVar.deleteMethod.active" >
+						<s:if test="#resourceVar.deleteMethod != null && #resourceVar.deleteMethod.active && (!#resourceVar.deleteMethod.hidden)" >
 							<s:if test="#resourceVar.deleteMethod.requiredPermission != null" ><s:set var="icon" value="#icon_lock" /><s:set var="title" value="#title_lock" /></s:if>
 							<s:elseif test="#resourceVar.deleteMethod.requiredAuth" ><s:set var="icon" value="#icon_auth" /><s:set var="title" value="#title_auth" /></s:elseif>
 							<s:else><s:set var="icon" value="#icon_free" /><s:set var="title" value="#title_free" /></s:else>
