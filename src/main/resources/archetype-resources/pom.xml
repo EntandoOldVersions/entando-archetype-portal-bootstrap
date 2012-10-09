@@ -404,7 +404,7 @@
 								</resource>
 							</resources>
 						</configuration>
-					</execution>					
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
@@ -429,7 +429,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-										
+
 										<replaceregexp byline="true">
 										  <regexp pattern="^REVOKE.*$"/>
 										  <substitution expression=""/>
@@ -437,15 +437,15 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-										
+
 										<replaceregexp byline="true">
 										  <regexp pattern="^GRANT.*$"/>
 										  <substitution expression=""/>
 										  <fileset dir="${project.build.directory}/derby/sql">
 										    <include name="*.sql"/>
 										  </fileset>
-										</replaceregexp>																	
-										
+										</replaceregexp>
+
 										<replaceregexp byline="true">
 										  <regexp pattern="ALTER TABLE ONLY"/>
 										  <substitution expression="ALTER TABLE"/>
@@ -453,7 +453,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-										
+
 										<replaceregexp byline="true">
 										  <regexp pattern="CREATE PROCEDURAL LANGUAGE plpgsql;"/>
 										  <substitution expression=""/>
@@ -461,7 +461,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-										
+
 										<replaceregexp byline="true">
 										  <regexp pattern="character varying "/>
 										  <substitution expression="LONG VARCHAR "/>
@@ -469,7 +469,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-										
+
 										<replaceregexp byline="true">
 										  <regexp pattern="character varying,"/>
 										  <substitution expression="LONG VARCHAR,"/>
@@ -477,7 +477,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-										
+
 										<replaceregexp byline="true">
 										  <regexp pattern="character varying$"/>
 										  <substitution expression="LONG VARCHAR"/>
@@ -485,7 +485,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-										
+
 										<replaceregexp byline="true">
 										  <regexp pattern=" USING btree"/>
 										  <substitution expression=""/>
@@ -493,7 +493,7 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-										
+
 										<replaceregexp byline="true">
 										  <regexp pattern="timestamp without time zone"/>
 										  <substitution expression="timestamp"/>
@@ -501,23 +501,23 @@
 										    <include name="*.sql"/>
 										  </fileset>
 										</replaceregexp>
-										
+
 										<replaceregexp byline="true">
 										  <regexp pattern="DEFAULT ''::LONG VARCHAR NOT NULL"/>
 										  <substitution expression="NOT NULL WITH DEFAULT ''"/>
 										  <fileset dir="${project.build.directory}/derby/sql">
 										    <include name="*.sql"/>
 										  </fileset>
-										</replaceregexp>										
-										
+										</replaceregexp>
+
 										<replaceregexp byline="true">
 										  <regexp pattern='"char",'/>
 										  <substitution expression="CHAR(2),"/>
 										  <fileset dir="${project.build.directory}/derby/sql">
 										    <include name="*.sql"/>
 										  </fileset>
-										</replaceregexp>										
-										
+										</replaceregexp>
+
 									</then>
 								</if>
 							</target>
@@ -534,7 +534,7 @@
 						<version>20020829</version>
 					</dependency>
 				</dependencies>
-			</plugin>				
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>sql-maven-plugin</artifactId>
@@ -855,10 +855,10 @@
 					<excludes>
 						<exclude>**/*BaseTestCase*</exclude>
 					</excludes>
-					<includes> 
+					<includes>
 						<include>**/AllTests.java</include>
 					</includes>
-				</configuration>			
+				</configuration>
 			</plugin>
 			<!-- mvn jetty:run (with hot-redeploy) -->
 			<plugin>
@@ -937,7 +937,7 @@
 								<include>bootstrap/**</include>
 							</includes>
 						</resource>
-					</webResources>	
+					</webResources>
 					-->
 				</configuration>
 			</plugin>
@@ -963,7 +963,7 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
+				<!--This plugin's configuration is used to store Eclipse m2e settings
 					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -1064,7 +1064,7 @@
 			<version>${entando.version}</version>
 			<type>zip</type>
 			<classifier>misc</classifier>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>org.entando.entando</groupId>
 			<artifactId>entando-core-webapp</artifactId>
