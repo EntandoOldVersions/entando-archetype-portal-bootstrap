@@ -214,31 +214,9 @@
 		</exec>
 		<delete file="${basedir}/src/${project.src.branch}/db/tar/${webappname}${test.marker}Serv.backup" />
 	</target>
-	
+
 	<target name="PG-db-full-update-tar" description="PostgreSQL db update from tar file" depends="PG-db-drop, PG-db-create, PG-db-restore-tar">
 		<echo message="Databases full update [done]" />
-	</target>
-	
-	<target name="PG-db-concat-one-table">
-		<echo message="|| ${fileToBeAppended} schema appended to ${db}" />
-		<concat destfile="${dist.path}/derby/sql/${webappname}${db}_schema.sql" append="true">
-		  <filelist dir="${dist.path}/derby/sql" files="${webappname}${db}_schema_${fileToBeAppended}.sql" />
-		</concat>
-
-		<echo message="|| ${fileToBeAppended} data appended to ${db}" />
-		<concat destfile="${dist.path}/derby/sql/${webappname}${db}_data.sql" append="true">
-		  <filelist dir="${dist.path}/derby/sql" files="${webappname}${db}_data_${fileToBeAppended}.sql" />
-		</concat>
-	</target>
-
-	<target name="PG-db-concat">
-		<foreach target="PG-db-concat-one-table" param="fileToBeAppended" list="${db.backup.tables.port}">
-			<param name="db" value="Port" />
-		</foreach>
-
-		<foreach target="PG-db-concat-one-table" param="fileToBeAppended" list="${db.backup.tables.serv}">
-			<param name="db" value="Serv" />
-		</foreach>
 	</target>
 
 	<target name="PG-db-concat-one-table">
