@@ -90,7 +90,7 @@
 		</profile>
 	</profiles>
 	<properties>
-		
+
 		<!--
 		<test.database.driver>org.postgresql.Driver</test.database.driver>
 		<test.database.hostname>localhost</test.database.hostname>
@@ -109,7 +109,7 @@
 		<test.database.port.url>jdbc:mysql://${test.database.hostname}:${test.database.port}/${project.artifactId}testPort</test.database.port.url>
 		<test.database.serv.url>jdbc:mysql://${test.database.hostname}:${test.database.port}/${project.artifactId}testServ</test.database.serv.url>
 		-->
-		
+
 		<test.database.driver>org.apache.derby.jdbc.EmbeddedDriver</test.database.driver>
 		<test.database.hostname>localhost</test.database.hostname>
 		<test.database.port>1527</test.database.port>
