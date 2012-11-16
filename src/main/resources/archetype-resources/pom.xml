@@ -117,9 +117,9 @@
 		<test.database.password>agile</test.database.password>
 		<test.database.port.url>jdbc:derby:${project.artifactId}testPort;create=true</test.database.port.url>
 		<test.database.serv.url>jdbc:derby:${project.artifactId}testServ;create=true</test.database.serv.url>
-		
+
 		<skipDerby>true</skipDerby>
-		<entando.version>3.0.1-SNAPSHOT</entando.version>
+		<entando.version>experiment-bundles_with_bootstrap</entando.version>
 		<spring.version>3.0.6.RELEASE</spring.version>
 		<struts2.version>2.3.4.1</struts2.version>
 	</properties>
