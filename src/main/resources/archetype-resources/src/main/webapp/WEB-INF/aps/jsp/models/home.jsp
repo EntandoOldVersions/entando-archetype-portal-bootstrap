@@ -46,7 +46,7 @@
 						<li><a href="http://www.entando.com">Home of Entando</a></li>
 						<li><a href="http://github.com/entando/">Source code and online docs at GitHub</a></li>
 						<li><a href="http://sourceforge.net/projects/japs">Entando at SourceForge</a></li>
-					</ul>						
+					</ul>
 				</div><!--/.nav-collapse -->
 			</div>
 		</div>
