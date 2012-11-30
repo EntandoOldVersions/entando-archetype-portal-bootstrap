@@ -8,7 +8,7 @@
 	</parent>
 	<groupId>org.entando.entando</groupId>
 	<artifactId>entando-archetype-portal-bootstrap</artifactId>
-	<version>experiment-bundles_with_bootstrap</version>
+	<version>experiment-bundles_with_bootstrap-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Entando: Archetype for Generic Portal</name>
 	<description>Generic Portal Archetype for Entando: an agile, modern and user-centric open source Portal platform.</description>
