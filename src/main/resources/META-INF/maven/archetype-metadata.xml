@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archetype-descriptor
 	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-	name="entando-archetype-portal-generic"
+	name="entando-archetype-portal-bootstrap"
 	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<fileSets>
@@ -46,7 +46,13 @@
 			<includes>
 				<include>**/*</include>
 			</includes>
-		</fileSet>                      
+		</fileSet>			
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory>src/main/webapp/WEB-INF/aps/jsp/models/inc</directory>
+			<includes>
+				<include>lesscss-*/**/*.jsp</include>
+			</includes>
+		</fileSet>			
 		<fileSet encoding="UTF-8">
 			<directory>src/main/webapp</directory>
 			<includes>
@@ -55,6 +61,17 @@
 				<include>**/*.properties</include>
 				<include>**/*.txt</include>
 				<include>**/*.png</include>
+				<include>**/*.less</include>
+			</includes>
+			<excludes>
+				<exclude>src/main/webapp/WEB-INF/aps/jsp/models/inc/lesscss-active</exclude>
+				<exclude>src/main/webapp/WEB-INF/aps/jsp/models/inc/lesscss-available</exclude>
+			</excludes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory>src/main/webapp/resources/static/less</directory>
+			<includes>
+				<include>*.less</include>
 			</includes>
 		</fileSet>
 		<fileSet encoding="UTF-8">
@@ -89,17 +106,6 @@
 				<include>**/*</include>
 			</includes>
 		</fileSet>			
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>.settings</directory>
-			<includes>
-				<include>**/*.prefs</include>
-				<include>**/*.component</include>
-				<include>**/*.container</include>
-				<include>**/*.jsdtscope</include>
-				<include>**/*.name</include>
-				<include>**/*.xml</include>
-			</includes>
-		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
 			<directory></directory>
 			<includes>

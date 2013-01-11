@@ -10,7 +10,10 @@
 	-->
 	
 	<property name="webappname" value="${artifactId}" />
-	
+
+	<!-- default admin token, bound to default password "adminadmin" -->
+	<property name="entandoApi.token" value="571c5cc66e2e2783d5f43edfe74f0f91" />
+
 	<property name="postgres.hostname" value="localhost" />
 	<property name="postgres.port" value="5432" />
 	<property name="postgres.username" value="agile" />
