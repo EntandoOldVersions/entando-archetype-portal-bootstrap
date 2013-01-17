@@ -27,7 +27,7 @@
 				<include>**/placeholder.txt</include>
 				<include>**/*.tld</include>
 			</includes>
-		</fileSet>		
+		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
 			<directory>src/main/filters</directory>
 			<includes>
@@ -52,7 +52,7 @@
 			<includes>
 				<include>lesscss-*/**/*.jsp</include>
 			</includes>
-		</fileSet>			
+		</fileSet>
 		<fileSet encoding="UTF-8">
 			<directory>src/main/webapp</directory>
 			<includes>
@@ -105,7 +105,7 @@
 			<includes>
 				<include>**/*</include>
 			</includes>
-		</fileSet>			
+		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">
 			<directory></directory>
 			<includes>
