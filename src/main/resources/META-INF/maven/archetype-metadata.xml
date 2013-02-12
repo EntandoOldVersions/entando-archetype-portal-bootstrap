@@ -105,8 +105,6 @@
 			<includes>
 				<include>buildProperties.xml</include>
 				<include>build.xml</include>
-				<include>.project</include>
-				<include>.classpath</include>
 			</includes>
 		</fileSet>
 		<fileSet encoding="UTF-8">
