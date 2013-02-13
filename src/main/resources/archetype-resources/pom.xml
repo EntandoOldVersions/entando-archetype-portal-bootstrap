@@ -543,8 +543,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<packagingExcludes>WEB-INF/**.tld</packagingExcludes>
-					<warSourceExcludes>resources/static/entando-misc-bootstrap/**</warSourceExcludes>
+					<packagingExcludes>WEB-INF/**.tld,resources/static/entando-misc-bootstrap/**</packagingExcludes>
 					<webResources>
 						<resource>
 							<directory>${project.build.directory}/entando-misc-bootstrap/resources/static/entando-misc-bootstrap/bootstrap</directory>
