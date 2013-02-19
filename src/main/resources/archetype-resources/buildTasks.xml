@@ -153,12 +153,12 @@
 		<echo message="Dumping ${webappname}${test.marker}Port...." />
 		<exec executable="${postgres.bin.path}/${postgres.bin.dump}" dir="${basedir}/src/${project.src.branch}/db/export">
 			<env key="PGPASSWORD" value="${postgres.password}"/>
-			<arg value="-i" />
-			<arg line="-h ${postgres.hostname}" />
-			<arg line="-p ${postgres.port}" />
-			<arg line="-U ${postgres.username}" />
-			<arg line="-F p" />
-			<arg line="-a" />
+			<arg value="-i"/>
+			<arg line="-h ${postgres.hostname}"/>
+			<arg line="-p ${postgres.port}"/>
+			<arg line="-U ${postgres.username}"/>
+			<arg line="-F p"/>
+			<arg line="-a"/>
 			<arg line="-D" />
 			<arg line="-v" />
 			<arg line="-f ${webappname}${test.marker}Port_data.sql"/>
@@ -171,8 +171,8 @@
 			<arg line="-h ${postgres.hostname}"/>
 			<arg line="-p ${postgres.port}"/>
 			<arg line="-U ${postgres.username}"/>
-			<arg line="-F p" />
-			<arg line="-a" />
+			<arg line="-F p"/>
+			<arg line="-a"/>
 			<arg line="-D" />
 			<arg line="-v" />
 			<arg line="-f ${webappname}${test.marker}Serv_data.sql"/>
