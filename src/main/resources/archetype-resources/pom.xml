@@ -56,7 +56,7 @@
 			</properties>
 		</profile>
 		<profile>
-			<id>development-windows</id>
+			<id>windows</id>
 			<activation>
 				<os>
 					<family>development-windows</family>
