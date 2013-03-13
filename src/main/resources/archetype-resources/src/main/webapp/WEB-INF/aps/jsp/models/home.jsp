@@ -15,39 +15,21 @@
 			<script src="<wp:resourceURL />static/js/entando-misc-html5-essentials/html5shiv.js"></script>
 		<![endif]-->
 
-		<%--
-			FIXME!!!
-			Do not never include jquery.js here.
-			Do not never include bootstrap.js here
-			Try to use the inclusions coming from the navigation_menu bundle
-		--%>
-
 		<jsp:include page="inc/lesscss-active/lesscss.jsp" />
 		<jsp:include page="inc/models-common-utils.jsp" />
 
 	</head>
 	<body>
 
-	<%--
-		FIXME!!!
-		Try replacing this with a real showlet, and see what happens.
-	--%>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
 				<a class="brand" href="#"><img src="<wp:imgURL />entando-logo.png" alt="Entando - Enterprise Portals Reinvented" /></a>
-				<div class="nav-collapse">
 					<ul class="nav">
 						<li><a href="http://www.entando.com">Home of Entando</a></li>
 						<li><a href="http://github.com/entando/">Source code and online docs at GitHub</a></li>
 						<li><a href="http://sourceforge.net/projects/japs">Entando at SourceForge</a></li>
 					</ul>
-				</div><!--/.nav-collapse -->
 			</div>
 		</div>
 	</div>
