@@ -27,7 +27,9 @@
 				<a class="brand" href="#"><img src="<wp:imgURL />entando-logo.png" alt="Entando - Enterprise Portals Reinvented" /></a>
 					<ul class="nav">
 						<li><a href="http://www.entando.com">Home of Entando</a></li>
+						<li class="divider-vertical"></li>
 						<li><a href="http://github.com/entando/">Source code and online docs at GitHub</a></li>
+						<li class="divider-vertical"></li>
 						<li><a href="http://sourceforge.net/projects/japs">Entando at SourceForge</a></li>
 					</ul>
 			</div>
@@ -45,14 +47,37 @@
 		They now have to replace this placeholder page or just its contents.
 	</p>
 
-	<p>
-		Use the following to enter the <a href="<wp:info key="systemParam" paramName="applicationBaseURL" />do/login.action">Administration Area</a>:
-	</p>
+	<div class="row">
 
-	<ul>
-		<li>Username: <strong>admin</strong></li>
-		<li>Password: <strong>adminadmin</strong></li>
-	</ul>
+		<div class="well span7 text-center margin-medium-vertical">
+
+			<h2>Access to the Administration Area</h2>
+
+			<p>
+				The built-in administrator user is <strong>admin</strong>:
+			</p>
+
+			<p class="margin-medium-vertical">
+				<a href="<wp:info key="systemParam" paramName="applicationBaseURL" />do/doLogin.action?username=admin&amp;password=adminadmin&amp;backend_client_gui=advanced" class="btn btn-primary btn-large"><i class="icon-user icon-white"></i>&#32;Enter as admin</a>
+			</p>
+
+			<p>
+				The following are its credentials:<br />
+				Username: <strong>admin</strong> / Password: <strong>adminadmin</strong>
+			</p>
+
+		</div>
+
+	</div>
+
+	<div class="row">
+
+		<p class="well span7 text-center margin-medium-bottom">
+			Also, you don't likely want to miss the guide which could help you<br />
+			<a class="btn" href="https://github.com/entando/Entando/wiki/Entando%3A-an-unexpected-journey"><i class="icon-file"></i>&#32;Getting started with your own portal</a>
+		</p>
+
+	</div>
 
 	<p>
 	Have a good time with <strong>Entando</strong>!<br />
