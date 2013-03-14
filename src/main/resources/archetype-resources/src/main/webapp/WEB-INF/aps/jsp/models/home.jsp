@@ -1,218 +1,92 @@
 <%@ taglib prefix="wp" uri="/aps-core" %>
-<wp:contentNegotiation mimeType="application/xhtml+xml" charset="utf-8"/>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+<html lang="<wp:info key="currentLang" />">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
-<head>
-	<title>
-		Entando| <wp:currentPage param="title" />
-	</title>
+		<title>
+			<wp:currentPage param="title" /> - Entando
+		</title>
+		<link rel="icon" href="<wp:info key="systemParam" paramName="applicationBaseURL" />favicon.png" type="image/png" />
 
-    <wp:outputHeadInfo type="CSS"> 
-        <link href="resources/css/<wp:printHeadInfo />" type="text/css" rel="stylesheet" />
-    </wp:outputHeadInfo>
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="<wp:resourceURL />static/js/entando-misc-html5-essentials/html5shiv.js"></script>
+		<![endif]-->
 
-<style type="text/css">
+		<jsp:include page="inc/lesscss-active/lesscss.jsp" />
+		<jsp:include page="inc/models-common-utils.jsp" />
 
-html {
-	margin: 0;
-	padding: 0;
-	min-height: 100%;
-	background-color: #f1f2f1;
-	text-align: center;
-	background-image: url("<wp:imgURL />/square_bg.png");		
-}
+	</head>
+	<body>
 
-body {
-	text-align: left;
-	margin: 1% auto;
-	padding: 0 5% 1% 5%;;
-	min-width: 700px;
-	max-width: 800px;
-	font-size: 100.01%;
-	background-color: #ffffff;
-	border: 1px solid #dedede;
-	background-image: url("<wp:imgURL />/px_by_Gre3g.png");	
-	color: #dedede;
-}
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="#"><img src="<wp:imgURL />entando-logo.png" alt="Entando - Enterprise Portals Reinvented" /></a>
+					<ul class="nav">
+						<li><a href="http://www.entando.com">Home of Entando</a></li>
+						<li class="divider-vertical"></li>
+						<li><a href="http://github.com/entando/">Source code and online docs at GitHub</a></li>
+						<li class="divider-vertical"></li>
+						<li><a href="http://sourceforge.net/projects/japs">Entando at SourceForge</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
 
-h1 {
-	font-size: 1.5em;
-	text-align: left;
-	margin: 1em 0 0.5em 0;
-	padding: 0 0 0 1em;
-	color: #B2E02E;
-	border-bottom: 0.1em solid #dedede;
-}
+	<div class="container">
 
-h2 {
-	font-size: 0.9em;
-}
+	<!-- START WELCOME -->
+	<h1>It Worked!<br /> <strong>Entando</strong> is installed on this host.</h1>
+	<h2 class="lead">Version <wp:info key="systemParam" paramName="version" /></h2>
 
-h2.version {
-	font-weight: bold;
-	color: #dedede;		
-	text-align: left;
-	margin-bottom: 2em;
-	text-align: right;
-}
+	<p>
+		If you can see this page, then the people who own this host have just installed <strong>Entando</strong> successfully.<br/>
+		They now have to replace this placeholder page or just its contents.
+	</p>
 
-p {
-	margin: 0.5em 0;
-	padding: 0;
-	line-height: 1.4;
-}
+	<div class="row">
 
-p, li {
-	font-size: 0.9em;
-}
+		<div class="well span7 text-center margin-medium-vertical">
 
-li li, li p {
-	font-size: 1em;
-}
+			<h2>Access to the Administration Area</h2>
 
-ul {
-	list-style-type: square;
-	color: #dedede;
-}
+			<p>
+				The built-in administrator user is <strong>admin</strong>:
+			</p>
 
-li {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
+			<p class="margin-medium-vertical">
+				<a href="<wp:info key="systemParam" paramName="applicationBaseURL" />do/doLogin.action?username=admin&amp;password=adminadmin&amp;backend_client_gui=advanced" class="btn btn-primary btn-large"><i class="icon-user icon-white"></i>&#32;Enter as admin</a>
+			</p>
 
-img.right {
-	float: right;
-	margin: 0 0 0.5em 0.5em;
-}
+			<p>
+				The following are its credentials:<br />
+				Username: <strong>admin</strong> / Password: <strong>adminadmin</strong>
+			</p>
 
-img.logo {
-	-moz-box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0.2);
-	-webkit-box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0.2);
-	box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0.2);
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
-}
+		</div>
 
-.clear {
-	clear: both;
-}
+	</div>
 
-a:link, a:visited {
-	color: #B2E02E;
-	border-bottom: 0.1em solid #B2E02E;
-	text-decoration: none; 
-}
+	<div class="row">
 
-a:hover, a:active, a:focus {
-	border-bottom: none;
-	text-decoration: none; 
-}
+		<p class="well span7 text-center margin-medium-bottom">
+			Also, you don't likely want to miss the guide which could help you<br />
+			<a class="btn" href="https://github.com/entando/Entando/wiki/Entando%3A-an-unexpected-journey"><i class="icon-file"></i>&#32;Getting started with your own portal</a>
+		</p>
 
-/* CSS3 */
+	</div>
 
-body {
-	-moz-box-shadow: 3px 3px 6px 0 #aaaaaa;
-	-webkit-box-shadow: 3px 3px 6px 0 #aaaaaa;
-	box-shadow: 3px 3px 6px 0 #aaaaaa;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	border-radius: 8px;
-}
+	<p>
+	Have a good time with <strong>Entando</strong>!<br />
+	- The Team -
+	</p>
 
-h1 {
-	text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.9);
-	filter: dropshadow(color=#000000, offx=1, offy=0);
-}
+	<!-- END WELCOME -->
 
-/* END CSS3 */
-	
-</style>
+	</div>
 
-
-<script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Droid Sans:regular,bold', 'Droid Sans Mono', 'Molengo' ] }
-  };
-  (function() {
-	document.getElementsByTagName("html")[0].className += " wf-loading";	  
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
-</script>
-	
-<style type="text/css"> 
-.wf-loading {
-	visibility: hidden;
-}
-
-body {
-	font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
-}
-
-h1, h2 {
-	font-family: Molengo, serif;
-}
-
-h2.version {
-	font-family: 'Droid Sans Mono', monospace;
-}
-</style>
- 
-</head> 
-	
-<body>
-
-
-<!-- START WELCOME -->
-<h1>It Worked!<br /> <strong>Entando</strong> is Installed on this host.</h1>
-<h2 class="version">Version <wp:info key="systemParam" paramName="version" /></h2>
-
-<p>
-	<img class="right logo" src="<wp:imgURL />/entando-logo_badge.png" alt="" />
-	If you can see this page, then the people who own this host have just installed <strong>Entando</strong> successfully.<br/>
-	They now have to replace this placeholder page or just its contents.
-</p>
-
-<p>
-	You can go to the <a href="<wp:info key="systemParam" paramName="applicationBaseURL" />do/login.action">Login form</a> 
-	and use the following to enter in the Administration Area.
-</p>
-
-<ul>
-	<li>Username: <strong>admin</strong></li>
-	<li>Password: <strong>adminadmin</strong></li>
-</ul>
-
-<h2>Pro tip:</h2>
-<p>
-	Entando serves by default <a href="http://www.w3.org/TR/xhtml-media-types/#media-types">XHTML with the correct media type</a>: <em>application/xhtml+xml</em>.<br />
-	When the browser supports it, this can be less than comfortable during fast hacking / development cycles because if you miss a closing tag the browser will complain with its ugly XML errors.
-</p>
-<p>
-	<strong>Here's the tip:</strong> ovverride <em>src/main/webapp/WEB-INF/aps/jsp/system/main.jsp</em> by copying it from <em>entando-core-webapp</em> into your project folder.<br />
-	There you can find the custom tag Entando uses to perform content negotiation, and temporarily comment it or set it to something less restrictive like <em>text/html</em>.
-</p>
-
-<p>
-Have a good time with <strong>Entando</strong>!<br />
-- The Team -
-</p>
-
-<h2>Links:</h2>
-<ul>
-	<li><a href="http://www.entando.com">Home of the <strong>Entando</strong> project</a></li>
-	<li><a href="http://github.com/entando/">Source code and online docs at GitHub</a></li>
-	<li><a href="http://sourceforge.net/projects/japs"><strong>Entando</strong> at SourceForge</a></li>
-</ul>
-<!-- END WELCOME -->
-
-</body>
+  </body>
 </html>
