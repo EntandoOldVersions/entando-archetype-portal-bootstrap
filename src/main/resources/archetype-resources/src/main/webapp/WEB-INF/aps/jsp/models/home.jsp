@@ -21,7 +21,7 @@
 	</head>
 	<body>
 
-	<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
 				<a class="brand" href="#"><img src="<wp:imgURL />entando-logo.png" alt="Entando - Simplifying Enterprise Portals" /></a>
@@ -74,7 +74,7 @@
 
 		<p class="well span7 text-center margin-medium-bottom">
 			Also, you don't likely want to miss the guide which could help you<br />
-			<a class="btn" href="https://github.com/entando/Entando/wiki/Entando%3A-an-unexpected-journey"><i class="icon-file"></i>&#32;Getting started with your own portal</a>
+			<a class="btn btn-success" href="https://github.com/entando/Entando/wiki/Entando%3A-an-unexpected-journey"><i class="icon-file icon-white"></i>&#32;Getting started with your own portal</a>
 		</p>
 
 	</div>
